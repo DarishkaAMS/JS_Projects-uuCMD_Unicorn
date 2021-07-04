@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>uuJokes</title>
+
+    
+    <base href="<%=appBasePath%>public/0.1.0/" data-uu-app-base="<%=appBasePath%>" data-uu-app-assets-base="public/0.1.0/">
+
+    <script><%=uu5Environment%></script>
+
+    <script src="<%=cdnBaseUri%>uu-uu5g04/1.0.0/uu5g04-browser-update.min.js" crossorigin="anonymous"></script>
+
+    <link type="text/css" rel="stylesheet" href="<%=cdnBaseUri%>libs/clearsans/2.0.0/fonts/clear-sans.min.css">
+    <link type="text/css" rel="stylesheet" href="loading.css">
+    <link rel="preconnect" href="https://uuidentity.plus4u.net">
+    <script src="<%=cdnBaseUri%>libs/systemjs/0.19.47/system.js" crossorigin="anonymous"></script>
+
+    <meta name="apple-mobile-web-app-title" content="uuJokes">
+    <meta name="application-name" content="uuJokes">
+    <meta name="msapplication-TileImage" content="<%=appBasePath%>public/0.1.0/assets/meta/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#004191">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="<%=appBasePath%>public/0.1.0/assets/meta/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="<%=appBasePath%>public/0.1.0/assets/meta/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="assets/meta/safari-pinned-tab.svg" color="#004191">
+
+    
+
+    <script>
+      window.SystemJS && SystemJS.config({
+        "paths": {
+          "create-react-class": "<%=cdnBaseUri%>libs/create-react-class/15.6.3/create-react-class.js",
+          "immutable": "<%=cdnBaseUri%>libs/immutable/3.8.2/immutable.js",
+          "prop-types": "<%=cdnBaseUri%>libs/prop-types/15.7.2/prop-types.js",
+          "react": "<%=cdnBaseUri%>libs/react/16.13.1/react.js",
+          "react-dnd": "<%=cdnBaseUri%>libs/react-dnd/7.0.2/ReactDnD.js",
+          "react-dnd-html5-backend": "<%=cdnBaseUri%>libs/react-dnd-html5-backend/7.0.2/ReactDnDHTML5Backend.js",
+          "react-dnd-touch-backend": "<%=cdnBaseUri%>libs/react-dnd-touch-backend/0.7.1/Touch.browserified.js",
+          "react-dom": "./hot-loader-react-dom.js",
+          "uu5g04": "<%=cdnBaseUri%>uu-uu5g04/1.0.0/uu5g04.js",
+          "uu5g04-block-layout": "<%=cdnBaseUri%>uu-uu5g04/1.0.0/uu5g04-block-layout.js",
+          "uu5g04-bricks": "<%=cdnBaseUri%>uu-uu5g04/1.0.0/uu5g04-bricks.js",
+          "uu5g04-bricks-editable": "<%=cdnBaseUri%>uu-uu5g04/1.0.0/uu5g04-bricks-editable.js",
+          "uu5g04-forms": "<%=cdnBaseUri%>uu-uu5g04/1.0.0/uu5g04-forms.js",
+          "uu5g04-hooks": "<%=cdnBaseUri%>uu-uu5g04/1.0.0/uu5g04-hooks.js",
+          "uu5imagingg01": "<%=cdnBaseUri%>uu-uu5imagingg01/1.0.0/uu5imagingg01.js",
+          "uu5richtextg01": "<%=cdnBaseUri%>uu-uu5richtextg01/1.0.0/uu5richtextg01.js",
+          "uu5tilesg01": "<%=cdnBaseUri%>uu-uu5tilesg01/3.0.0/uu5tilesg01.js",
+          "uu5treeg01": "<%=cdnBaseUri%>uu-uu5treeg01/3.0.0/uu5treeg01.js",
+          "uu_appg01": "<%=cdnBaseUri%>uu-appg01/5.0.0/uu_appg01.js",
+          "uu_appg01_core": "<%=cdnBaseUri%>uu-appg01-core/5.0.0/uu_appg01_core.js",
+          "uu_appg01_oidc": "<%=cdnBaseUri%>uu-appg01-oidc/3.0.0/uu_appg01_oidc.js",
+          "uu_contentkitg01": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01.js",
+          "uu_contentkitg01-diagrams": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-diagrams.js",
+          "uu_contentkitg01-grids": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-grids.js",
+          "uu_contentkitg01-images": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-images.js",
+          "uu_contentkitg01-layout": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-layout.js",
+          "uu_contentkitg01-links": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-links.js",
+          "uu_contentkitg01-multimedia": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-multimedia.js",
+          "uu_contentkitg01-separators": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-separators.js",
+          "uu_contentkitg01-tables": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-tables.js",
+          "uu_contentkitg01-tables-editable": "<%=cdnBaseUri%>uu-contentkitg01/2.0.0/uu_contentkitg01-tables-editable.js",
+          "uu_oidcg01": "<%=cdnBaseUri%>uu-appg01-oidc/3.0.0/uu_appg01_oidc.js",
+          "uu_pg01": "<%=cdnBaseUri%>uu-pg01/3.0.0/uu_pg01.js",
+          "uu_pg01-bricks": "<%=cdnBaseUri%>uu-pg01/3.0.0/uu_pg01-bricks.js",
+          "uu_pg01-forms": "<%=cdnBaseUri%>uu-pg01/3.0.0/uu_pg01-forms.js",
+          "uu_pg01-tiles": "<%=cdnBaseUri%>uu-pg01/3.0.0/uu_pg01-tiles.js",
+          "uu_plus4u5filesg01": "<%=cdnBaseUri%>uu-plus4u5filesg01/4.0.0/uu_plus4u5filesg01.js",
+          "uu_plus4u5g01": "<%=cdnBaseUri%>uu-plus4u5g01/4.0.0/uu_plus4u5g01.js",
+          "uu_plus4u5g01-app": "<%=cdnBaseUri%>uu-plus4u5g01/4.0.0/uu_plus4u5g01-app.js",
+          "uu_plus4u5g01-bricks": "<%=cdnBaseUri%>uu-plus4u5g01/4.0.0/uu_plus4u5g01-bricks.js",
+          "uu_plus4u5g01-context": "<%=cdnBaseUri%>uu-plus4u5g01/4.0.0/uu_plus4u5g01-context.js",
+          "uu_plus4u5g01-hooks": "<%=cdnBaseUri%>uu-plus4u5g01/4.0.0/uu_plus4u5g01-hooks.js",
+          "uu_plus4u5g01-uubmldraw": "<%=cdnBaseUri%>uu-plus4u5g01/4.0.0/uu_plus4u5g01-uubmldraw.js",
+          "uu_territoryg01": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01.js",
+          "uu_territoryg01-accessroleifc": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-accessroleifc.js",
+          "uu_territoryg01-activity": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-activity.js",
+          "uu_territoryg01-ai": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-ai.js",
+          "uu_territoryg01-artifact": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-artifact.js",
+          "uu_territoryg01-artifactifc": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-artifactifc.js",
+          "uu_territoryg01-awsc": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-awsc.js",
+          "uu_territoryg01-bricks": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-bricks.js",
+          "uu_territoryg01-ee": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-ee.js",
+          "uu_territoryg01-folder": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-folder.js",
+          "uu_territoryg01-forms": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-forms.js",
+          "uu_territoryg01-groupifc": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-groupifc.js",
+          "uu_territoryg01-metamodel": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-metamodel.js",
+          "uu_territoryg01-obc": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-obc.js",
+          "uu_territoryg01-person": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-person.js",
+          "uu_territoryg01-rolegroupifc": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-rolegroupifc.js",
+          "uu_territoryg01-roleifc": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-roleifc.js",
+          "uu_territoryg01-territorygroup": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-territorygroup.js",
+          "uu_territoryg01-thing": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-thing.js",
+          "uu_territoryg01-unit": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-unit.js",
+          "uu_territoryg01-unitgroup": "<%=cdnBaseUri%>uu-territoryg01/1.0.0/uu_territoryg01-unitgroup.js",
+          "systemjs": "<%=cdnBaseUri%>libs/systemjs/0.19.47/system.src.js",
+          "hot-loader-react-common": "./hot-loader-react-common.js",
+          "react-hot-loader": "./hot-loader-react-hot-loader.js",
+          "_index": "./index.js"
+        },
+        "meta": {
+          "<%=cdnBaseUri%>libs/*": {
+            "format": ""
+          },
+          "<%=cdnBaseUri%>*": {
+            "format": "amd"
+          }
+        },
+        "depCache": {
+          "_index": ["uu_appg01_oidc","uu_appg01_core","uu5g04","uu_plus4u5g01","react-hot-loader","create-react-class","prop-types","react","react-dom","uu5g04-bricks","uu5g04-forms","uu5g04-hooks","uu_contentkitg01","uu_appg01","uu_plus4u5g01-bricks","uu_plus4u5g01-app","uu_territoryg01","uu5g04-block-layout","uu5tilesg01","uu_pg01","uu_pg01-bricks","immutable","uu5richtextg01","uu_plus4u5g01-hooks","uu_territoryg01-bricks","uu_territoryg01-forms","uu_territoryg01-activity","uu_territoryg01-artifactifc"]
+        }
+      });
+    </script>
+  </head>
+
+  <body class="clear-sans">
+    <div id="uuApp">
+      <div class="uu-app-loading">
+        <div class="uu-app-loading-spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="uu-app-loading-content">uuJokes</div>
+      </div>
+    </div>
+    
+    <div id="uu-app-script-error" hidden>
+      <style>
+        .uu-app-script-error-description { text-align: center; margin: 3em auto 1em; }
+        .uu-app-script-error-toggle { background: #e0e0e0; border: 0 none; display: block; padding: 1em; margin: 0 auto; text-align: center; border-radius: 3px; cursor: pointer; }
+        .uu-app-script-error-toggle:hover, .uu-app-script-error-toggle:focus { background: #bdbdbd; }
+        .uu-app-script-error-details { background: #eeeeee; overflow: auto; max-width: 100%; }
+      </style>
+      <div lang="en">
+        <div class="uu-app-script-error-description" hidden data-key="error">An unexpected error occurred. Contact application <a href="https://www.plus4u.net/en/contacts" target="_blank">helpdesk</a> to resolve this issue.</div>
+        <div class="uu-app-script-error-description" hidden data-key="offline">You are not connected to the Internet. Fix the connection and reload the page.</div>
+        <button class="uu-app-script-error-toggle">Show error details</button>
+        <pre class="uu-app-script-error-details" hidden tabindex="0"></pre>
+      </div>
+    </div>
+    <script>
+      function handleUuAppScriptError(error) {
+        console.error(error);
+        var targetEl = document.getElementById("uuApp");
+        if (!targetEl) document.body.appendChild(targetEl = document.createElement("div"));
+        else targetEl.innerHTML = "";
+
+        var descKey = navigator.onLine === false ? "offline" : "error";
+        var errorEl = document.querySelector('#uu-app-script-error [lang="en"]');
+        var descEl = errorEl.querySelector('.uu-app-script-error-description[data-key="' + descKey + '"]');
+        var toggleEl = errorEl.querySelector(".uu-app-script-error-toggle");
+        var detailsEl = errorEl.querySelector(".uu-app-script-error-details");
+        descEl.hidden = false;
+        toggleEl.addEventListener("click", function () { detailsEl.hidden = false; this.style.cssText = "display: none"; detailsEl.focus(); });
+        detailsEl.appendChild(document.createTextNode(error != null ? (error.stack || error) + "" : error + ""));
+        detailsEl.addEventListener("keydown", function (e) {
+          if ((e.ctrlKey || e.metaKey) && e.keyCode === 65) { e.preventDefault(); e.stopPropagation(); getSelection().selectAllChildren(this); }
+        });
+        targetEl.appendChild(errorEl);
+      }
+    </script>
+
+
+    <script>
+      if (!window.SystemJS) handleUuAppScriptError(new Error("SystemJS failed to load."));
+      else SystemJS.import("./index.js").then(function (Index) {
+        Index.render("uuApp");
+      }).catch(handleUuAppScriptError);
+    </script>
+
+    <noscript>
+      <style>
+        .uu-app-loading {
+          display: none !important;
+        }
+        .noscript-info {
+          background: #c6c6c6;
+          display: block;
+          padding: 3em 1em;
+          margin: 3em 0;
+          text-align: center;
+        }
+      </style>
+      <div class="noscript-info">
+        <h4>We have detected that JavaScript is disabled. This application requires JavaScript to run.</h4>
+        <div>
+          <a href="http://www.enable-javascript.com/" target="_blank">
+            How to enable JavaScript in your web browser?
+          </a>
+        </div>
+      </div>
+      <div class="noscript-info">
+        <h4>Zjistili jsme, že nemáte povolený JavaScript. Tato aplikace ke spuštění vyžaduje JavaScript.</h4>
+        <div>
+          <a href="http://www.enable-javascript.com/cz/" target="_blank">
+            Jak povolit JavaScript ve Vašem prohlížeči?
+          </a>
+        </div>
+      </div>
+    </noscript>
+  </body>
+</html>
