@@ -4,8 +4,13 @@
       "type": "uuAppObjectStore",
       "realization": "MongoDB",
       "schemaMap": {
-        "jokesMain": {
-          "realization": "dao/JokesMainMongo"
+        "jokesInstance": {
+          "realization": "dao/JokesInstanceMongo",
+          "maxNoi": 1
+        },
+        "joke": {
+          "realization": "dao/JokeMongo",
+          "maxNoi": 1000
         }
       }
     }

@@ -17,9 +17,33 @@
         "sysStateList": ["created"],
         "profileList": ["Public","AwidLicenseOwner"]
       },
+      "jokesInstance/init": {
+        "sysStateList": ["active"],
+        "profileList": ["AwidLicenseOwner"]
+      },
       "joke/create": {
         "sysStateList": ["active"],
         "profileList": ["Authorities","Executives"]
+      },
+      "joke/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", "Readers"]
+      },
+      "joke/update": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
+      },
+      "joke/updateVisibility": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities"]
+      },
+      "joke/delete": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
+      },
+      "joke/list": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", "Readers"]
       }
     }
   }

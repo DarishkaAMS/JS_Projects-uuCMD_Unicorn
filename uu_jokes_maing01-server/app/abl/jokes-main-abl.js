@@ -368,34 +368,34 @@ class JokesInstanceAbl {
   //   return jokesInstance;
   // }
 
-  async update(awid, dtoIn) {
-    // Happy Day Scenario 1
-    let validationResult = this.validator.validate("jokesInstanceUpdateDtoInType", dtoIn);
-    // A1, A2
-    let uuAppErrorMap = ValidationHelper.processValidationResult(
-      dtoIn,
-      validationResult,
-      WARNINGS.updateUnsupportedKeys.code,
-      Errors.Update.InvalidDtoIn
-    );
-
-    // Happy Day Scenario  3
-    let jokesInstance;
-    try {
-      dtoIn.awid = awid;
-      jokesInstance = await this.dao.updateByAwid(dtoIn);
-    } catch (e) {
-      if (e instanceof ObjectStoreError) {
-        // A6
-        throw new Errors.Update.JokesInstanceDaoUpdateByAwidFailed({ uuAppErrorMap }, e);
-      }
-      throw e;
-    }
-
-    // Happy Day Scenario  4
-    jokesInstance.uuAppErrorMap = uuAppErrorMap;
-    return jokesInstance;
-  }
+  // async update(awid, dtoIn) {
+  //   // Happy Day Scenario 1
+  //   let validationResult = this.validator.validate("jokesInstanceUpdateDtoInType", dtoIn);
+  //   // A1, A2
+  //   let uuAppErrorMap = ValidationHelper.processValidationResult(
+  //     dtoIn,
+  //     validationResult,
+  //     WARNINGS.updateUnsupportedKeys.code,
+  //     Errors.Update.InvalidDtoIn
+  //   );
+  //
+  //   // Happy Day Scenario  3
+  //   let jokesInstance;
+  //   try {
+  //     dtoIn.awid = awid;
+  //     jokesInstance = await this.dao.updateByAwid(dtoIn);
+  //   } catch (e) {
+  //     if (e instanceof ObjectStoreError) {
+  //       // A6
+  //       throw new Errors.Update.JokesInstanceDaoUpdateByAwidFailed({ uuAppErrorMap }, e);
+  //     }
+  //     throw e;
+  //   }
+  //
+  //   // Happy Day Scenario  4
+  //   jokesInstance.uuAppErrorMap = uuAppErrorMap;
+  //   return jokesInstance;
+  // }
 
   // async setLogo(awid, dtoIn) {
   //   // Happy Day Scenario  1

@@ -1,0 +1,240 @@
+{
+  "code": "uu-jokes-maing01",
+  "name": "uuJokes uuAppMetaModel",
+  "desc": "uuJokes uuAppMetaModel",
+  "version": "2.2.3",
+  "defaultIcon": "uubml-artifact",
+
+  "stateList": [
+    {
+      "code": "active",
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Active</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Aktivní</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "type": "ACTIVE",
+      "icon": "uubml-state-s00-active"
+    },
+    {
+      "code": "underConstruction",
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Under Construction</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Rozpracováno</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "type": "ALTERNATIVE_ACTIVE",
+      "icon": "uubml-state-s00-alternative-active"
+    },
+    {
+      "code": "closed",
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Closed</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Uzavřeno</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "type": "FINAL",
+      "icon": "uubml-state-s00-final"
+    }
+  ],
+
+  "profileList": [
+    {
+      "code": "Authorities",
+      "name": "Authorities",
+      "desc": "Authorities"
+    },
+    {
+      "code": "Executives",
+      "name": "Executives",
+      "desc": "Executives"
+    },
+    {
+      "code": "Readers",
+      "name": "Readers",
+      "desc": "Readers"
+    }
+  ],
+
+  "defaultPermissionMatrix": [
+    "11000000-00000000-00000000-00000100",
+    "00100000-00000000-00000000-00000000",
+    "00000000-00000000-00000000-00000011"
+  ],
+
+
+  "ancestorPathMap": {
+    "uu-businessterritory-maing01/uuAwsc": [],
+    "uu-businessterritory-maing01/uuArtifactIfc": ["uu-businessterritory-maing01/uuAwsc"]
+  },
+
+  "ancestorMap": {
+    "uu-businessterritory-maing01/uuAwsc": {
+      "interfaceUuCmdMap": {
+        "authorizeMe": "",
+        "authorizeUuIdentity": "",
+        "get": "",
+        "load": "jokesInstance/load",
+        "loadEnvironment": "",
+        "loadPermissions": "",
+        "getNavigation": "",
+        "getImplicitPermissions": "",
+        "setBasicAttributes": "",
+        "setVersion": "",
+        "setResponsibleRole": "",
+        "setHomeFolder": "",
+        "setState": "",
+        "setPermissions": "",
+        "setImplicitPermissions": "",
+        "find": "",
+        "connectAppWorkspace": "",
+        "delete": "",
+        "listStateHistory": "",
+        "listMyRoles":"",
+
+        "loadLifeCycle": "",
+        "listActivities": "",
+        "activity/create": "",
+        "activity/load": "",
+        "activity/setBasicAttributes": "",
+        "activity/setTypeSpecificData": "",
+        "activity/setSubmitter": "",
+        "activity/addSolver": "",
+        "activity/removeSolver": "",
+        "activity/reactivateSolver": "",
+        "activity/elementary/setSolver": "",
+        "activity/addNote": "",
+        "activity/elementary/addNote": "",
+        "activity/setNoteImportance": "",
+        "activity/removeNote": "",
+        "activity/propagateReadToDw": "",
+
+        "aar/create": "",
+        "aar/get": "",
+        "aar/update": "",
+        "aar/delete": "",
+        "aar/listByArtifactA": "",
+        "aar/listByArtifactB": "",
+
+        "contextProperty/create": "",
+        "contextProperty/setBasicAttributes": "",
+        "contextProperty/get": "",
+        "contextProperty/listByArtifact": "",
+        "contextProperty/load": "",
+        "contextProperty/delete": "",
+        "contextProperty/setValue": ""
+      }
+    }
+  },
+
+  "synchronizeUuCmdMap": {
+  },
+
+  "useCaseProfileMap": {
+    "jokesInstance/load": "11100000-00000000-00000000-00000000",
+    "jokesInstance/update": "10000000-00000000-00000000-00000000",
+    "jokesInstance/setLogo": "10000000-00000000-00000000-00000000",
+    "jokesInstance/setIcons": "10000000-00000000-00000000-00000000",
+    "jokesInstance/getUveMetaData": "11100000-00000000-00000000-00000000",
+    "joke/create": "11000000-00000000-00000000-00000000",
+    "joke/get": "11100000-00000000-00000000-00000000",
+    "joke/update": "11000000-00000000-00000000-00000000",
+    "joke/updateVisibility": "10000000-00000000-00000000-00000000",
+    "joke/delete": "11000000-00000000-00000000-00000000",
+    "joke/list": "11100000-00000000-00000000-00000000",
+    "joke/addRating": "11100000-00000000-00000000-00000000",
+    "category/create": "11100000-00000000-00000000-00000000",
+    "category/get": "11100000-00000000-00000000-00000000",
+    "category/update": "11000000-00000000-00000000-00000000",
+    "category/delete": "11000000-00000000-00000000-00000000",
+    "category/list": "11100000-00000000-00000000-00000000",
+
+    "uu-app-binarystore/createBinary": "11000000-00000000-00000000-00000000",
+    "uu-app-binarystore/getBinaryData": "11100000-00000000-00000000-00000000",
+    "uu-app-binarystore/updateBinaryData": "11000000-00000000-00000000-00000000",
+    "uu-app-binarystore/deleteBinary": "11000000-00000000-00000000-00000000",
+    "uu-app-binarystore/listBinaries": "11000000-00000000-00000000-00000000",
+
+    "sys/listAuditLogRecordsByTimeAndSpp": ["Authorities", "AwidOwner"],
+    "sys/listMyAuditLogRecordsByTime": ["Authorities", "AwidOwner", "Executives", "Readers"],
+
+    "sys/getAppWorkspace": "10000000-00000000-00000000-00000000",
+    "sys/getProfile": "11000000-00000000-00000000-00000000",
+    "sys/setProfile": "10000000-00000000-00000000-00000000",
+    "sys/listProfiles": "11000000-00000000-00000000-00000000",
+    "sys/createPermission": "10000000-00000000-00000000-00000000",
+    "sys/deletePermission": "10000000-00000000-00000000-00000000",
+    "sys/listPermissions": "11000000-00000000-00000000-00000000",
+    "sys/getLicenseOwner": "11100000-00000000-00000000-00000000",
+    "sys/getAppWorkspaceConfig": "11100000-00000000-00000000-00000000",
+    "sys/setAppWorkspaceConfig": "10000000-00000000-00000000-00000000",
+    "sys/clearAppWorkspaceConfig": "10000000-00000000-00000000-00000000",
+    "sys/calculateDataStoreStats": "10000000-00000000-00000000-00000000",
+    "sys/getDataStoreStats": "11000000-00000000-00000000-00000000",
+    "sys/setAwidRuntimeMode": "10000000-00000000-00000000-00000000",
+    "sys/getAwidRuntimeMode": "11000000-00000000-00000000-00000000",
+    "sys/setAuthType": "10000000-00000000-00000000-00000000",
+    "sys/connectArtifact": "10000000-00000000-00000000-00000000",
+    "sys/awidDump": "10000000-00000000-00000000-00000000",
+    "sys/awidRestore": "10000000-00000000-00000000-00000000",
+    "sys/appClientToken/initKeys": "10000000-00000000-00000000-00000000",
+
+    "uu-businessterritory-maing01/uuAwsc/authorizeMe": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/authorizeUuIdentity": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/get": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/load": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/loadEnvironment": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/loadPermissions": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/getNavigation": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/getImplicitPermissions": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/setBasicAttributes": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/setVersion": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/setResponsibleRole": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/setHomeFolder": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/setState": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/setPermissions": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/setImplicitPermissions": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/find": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/connectAppWorkspace": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/delete": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/listStateHistory": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/loadLifeCycle": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/listActivities": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/listMyRoles": "11100000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/create": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/load": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/setBasicAttributes": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/setTypeSpecificData": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/setSubmitter": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/addSolver": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/removeSolver": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/reactivateSolver": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/elementary/setSolver": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/addNote": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/elementary/addNote": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/setNoteImportance": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/removeNote": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/activity/propagateReadToDw": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/aar/create": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/aar/get": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/aar/update": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/aar/delete": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/aar/listByArtifactA": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/aar/listByArtifactB": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/create": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/setBasicAttributes": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/get": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/listByArtifact": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/load": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/delete": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/setValue": "11000000-00000000-00000000-00000000",
+
+    "uu-businessterritory-maing01/uuAwsc/synchronizeArtifactAttributes": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/synchronizeHomeUnit": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/synchronizeHomeFolder": "11000000-00000000-00000000-00000000",
+    "uu-businessterritory-maing01/uuAwsc/synchronizeResponsibleRole": "11000000-00000000-00000000-00000000"
+  },
+
+  "routeMap": {
+    "userGate/activityDetail": [
+      "userGate/activityDetail",
+      "UuTerritory.Activity.Routes.Detail"
+    ],
+    "userGate/activityList": [
+      "userGate/activityList",
+      "UuTerritory.Activity.Routes.ActivityList"
+    ]
+  },
+
+  "typeMap":{
+
+  }
+}
