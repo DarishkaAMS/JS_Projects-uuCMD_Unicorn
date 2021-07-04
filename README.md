@@ -1,2 +1,2 @@
 # JS_Projects-uuCMD_Unicorn
-CRUD Tryouts regarding the examples
+Individual work from uuCmd
