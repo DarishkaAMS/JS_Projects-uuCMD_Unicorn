@@ -15,6 +15,11 @@
         "realization": "index.html",
         "httpMethod": "GET",
         "type": "UVE"
+      },
+      "joke/create": {
+        "realization": "api/controllers/JokesMainController.jokeCreate",
+        "httpMethod": "POST",
+        "type": "CMD"
       }
     }
   }

@@ -38,6 +38,12 @@ const Init = {
   },
 };
 
+const JokeCreate = {
+  UC_CODE: `${JOKES_MAIN_ERROR_PREFIX}jokeCreate/`,
+  
+};
+
 module.exports = {
+  JokeCreate,
   Init,
 };
