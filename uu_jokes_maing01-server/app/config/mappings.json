@@ -16,26 +16,12 @@
         "httpMethod": "GET",
         "type": "UVE"
       },
-      "jokesInstance/init": {
-        "realization": "api/controllers/JokesInstanceController.init",
+      "jokesMain/init": {
+        "realization": "api/controllers/JokesMainController.init",
         "httpMethod": "POST",
         "type": "CMD"
       },
-      "jokesInstance/plugInBt": {
-        "realization": "api/controllers/JokesInstanceController.plugInBt",
-        "httpMethod": "POST",
-        "type": "CMD"
-      },
-      "jokesInstance/load": {
-        "realization": "api/controllers/JokesInstanceController.load",
-        "httpMethod": "GET",
-        "type": "CMD"
-      },
-      "jokesInstance/update": {
-        "realization": "api/controllers/JokesInstanceController.update",
-        "httpMethod": "POST",
-        "type": "CMD"
-      },
+
       "joke/create": {
         "realization": "api/controllers/JokeController.create",
         "httpMethod": "POST",
@@ -51,11 +37,6 @@
         "httpMethod": "POST",
         "type": "CMD"
       },
-      "joke/updateVisibility": {
-        "realization": "api/controllers/JokeController.updateVisibility",
-        "httpMethod": "POST",
-        "type": "CMD"
-      },
       "joke/delete": {
         "realization": "api/controllers/JokeController.delete",
         "httpMethod": "POST",
@@ -63,11 +44,6 @@
       },
       "joke/list": {
         "realization": "api/controllers/JokeController.list",
-        "httpMethod": "GET",
-        "type": "CMD"
-      },
-      "getProductInfo": {
-        "realization": "api/controllers/JokesInstanceController.getProductInfo",
         "httpMethod": "GET",
         "type": "CMD"
       }

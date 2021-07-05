@@ -6,7 +6,12 @@
       "realization": "MongoDB",
       "schemaMap": {
         "jokesMain": {
-          "realization": "dao/JokesMainMongo"
+          "realization": "dao/JokesMainMongo",
+          "maxNoi": 1
+        },
+        "joke": {
+          "realization": "dao/JokeMongo",
+          "maxNoi": 1000
         },
         "sysAuditLogRecord": {
           "realization": "uu_appg01_auditlog:dao/SysAuditLogRecordMongo"

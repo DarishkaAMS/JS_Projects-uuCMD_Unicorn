@@ -395,6 +395,30 @@
       "defaultUve": {
         "profileList": ["Public"],
         "sysStateList": ["active"]
+      },
+      "jokesMain/init": {
+        "sysStateList": ["active"],
+        "profileList": ["AwidLicenseOwner"]
+      },
+      "joke/create": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
+      },
+      "joke/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", "Public"]
+      },
+      "joke/update": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
+      },
+      "joke/delete": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
+      },
+      "joke/list": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", "Public"]
       }
     }
   }
